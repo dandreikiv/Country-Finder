@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YTL-Lw-Gt0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="esB-Wv-Jfe"/>
+                                </connections>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dZ-hI-C2a">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Ymn-Ls-wMb"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="CxE-Qe-jIF">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="Vo7-9z-FnU">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dWx-MM-wJO">
+                                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <state key="normal" title="Country">
+                                                    <color key="titleColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="4dC-yO-bHZ" kind="modal" id="Vyt-te-bbc"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="2dZ-hI-C2a" secondAttribute="trailing" constant="-16" id="31c-vR-Fvg"/>
+                            <constraint firstItem="YTL-Lw-Gt0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="405-xh-sHd"/>
+                            <constraint firstItem="2dZ-hI-C2a" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="V0z-Ww-KR9"/>
+                            <constraint firstItem="YTL-Lw-Gt0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="czB-d4-0xb"/>
+                            <constraint firstItem="2dZ-hI-C2a" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="i7C-Wk-dBk"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="YTL-Lw-Gt0" secondAttribute="bottom" id="yDE-pg-oOZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YTL-Lw-Gt0" secondAttribute="trailing" constant="-16" id="z9a-cI-8aP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countryButton" destination="dWx-MM-wJO" id="sUi-hd-oog"/>
+                        <outlet property="mapView" destination="YTL-Lw-Gt0" id="L3j-sJ-ffj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.66666666666666" y="299.14666666666665"/>
+        </scene>
+        <!--County Selector View Controller-->
+        <scene sceneID="Jnl-Da-kY4">
+            <objects>
+                <viewController id="4dC-yO-bHZ" customClass="CountySelectorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7nY-wT-f3Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Iw-XE-kgx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D09-9a-doR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUQ-mu-iCE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="oIW-H7-jKi"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="edS-Ja-6VK">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="SHo-rP-sd7">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nxA-Bl-Gm3">
+                                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelAction:" destination="4dC-yO-bHZ" eventType="touchUpInside" id="nyD-Kl-gGi"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rt3-AG-YCE">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3WR-7E-hpc" id="eZx-mE-SzG"/>
+                                    <outlet property="delegate" destination="3WR-7E-hpc" id="ULr-9Q-MSz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rt3-AG-YCE" firstAttribute="leading" secondItem="D09-9a-doR" secondAttribute="leadingMargin" constant="-16" id="1Ro-Fw-hYY"/>
+                            <constraint firstItem="wUQ-mu-iCE" firstAttribute="leading" secondItem="D09-9a-doR" secondAttribute="leadingMargin" constant="-16" id="4e9-3c-ttI"/>
+                            <constraint firstItem="wUQ-mu-iCE" firstAttribute="top" secondItem="D09-9a-doR" secondAttribute="topMargin" id="7Uc-Sf-VHy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rt3-AG-YCE" secondAttribute="trailing" constant="-16" id="SyZ-y2-kuA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wUQ-mu-iCE" secondAttribute="trailing" constant="-16" id="aNP-rg-33B"/>
+                            <constraint firstItem="rt3-AG-YCE" firstAttribute="top" secondItem="D09-9a-doR" secondAttribute="topMargin" constant="64" id="mH7-iK-qql"/>
+                            <constraint firstItem="3Iw-XE-kgx" firstAttribute="top" secondItem="rt3-AG-YCE" secondAttribute="bottom" id="qDK-jM-sPG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datasource" destination="3WR-7E-hpc" id="hWQ-zd-2Vg"/>
+                        <outlet property="tableView" destination="rt3-AG-YCE" id="U9s-0l-Cr0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBD-Q4-Wdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="3WR-7E-hpc" customClass="CountryDatasource"/>
+            </objects>
+            <point key="canvasLocation" x="626" y="299"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

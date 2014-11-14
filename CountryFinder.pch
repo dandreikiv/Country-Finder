@@ -1,0 +1,17 @@
+//
+//  CountryFinder.pch
+//  Country Finder
+//
+//  Created by Dmytro Andreikiv on 14/11/14.
+//  Copyright (c) 2014 mobile app. All rights reserved.
+//
+
+#ifndef Country_Finder_CountryFinder_pch
+#define Country_Finder_CountryFinder_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#endif

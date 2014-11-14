@@ -1,0 +1,17 @@
+PODS:
+  - iOS-KML-Framework (1.0.0):
+    - TBXML (~> 1.5)
+  - TBXML (1.5)
+
+DEPENDENCIES:
+  - iOS-KML-Framework (from `https://github.com/FLCLjp/iOS-KML-Framework.git`)
+
+EXTERNAL SOURCES:
+  iOS-KML-Framework:
+    :git: https://github.com/FLCLjp/iOS-KML-Framework.git
+
+SPEC CHECKSUMS:
+  iOS-KML-Framework: af22c3c41f4205ddf565ee5b925749d9adec5606
+  TBXML: a279440030ba55c40e1455cafba3b0a44e1963d4
+
+COCOAPODS: 0.34.4
