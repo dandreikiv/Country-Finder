@@ -14,35 +14,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import "KML+MapKit.h"
 
-@interface KMLPlacemark (LocationHelper)
-
-- (BOOL)containsLocation:(CLLocation *)location;
-
-@end
-
-@implementation KMLPlacemark(LocationHelper)
-
-- (BOOL)containsLocation:(CLLocation *)location
-{
-    if ([self.geometry isKindOfClass:[KMLMultiGeometry class]]) {
-        
-        KMLMultiGeometry * multyGeomentry = (KMLMultiGeometry *)self.geometry;
-        
-        for (KMLAbstractGeometry * geometry in multyGeomentry.geometries) {
-            BOOL result = [geometry constainsLocation:location];
-            return result;
-        }
-        
-    } else {
-        BOOL result = [self.geometry constainsLocation:location];
-        return result;
-    }
-    
-    return NO;
-}
-
-@end
-
 @interface MapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, weak) IBOutlet MKMapView * mapView;
