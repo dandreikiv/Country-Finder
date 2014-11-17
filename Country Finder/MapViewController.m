@@ -147,6 +147,12 @@
      }];
 }
 
+#pragma mark - Actions - 
+
+- (IBAction)moveToCurrentLocation:(id)sender
+{
+    [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate animated:YES];
+}
 
 @end
 

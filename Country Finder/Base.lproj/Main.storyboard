@@ -48,6 +48,20 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQm-Jx-ICL">
+                                <rect key="frame" x="268" y="522" width="36" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="RgM-iR-iM2"/>
+                                    <constraint firstAttribute="height" constant="36" id="z8B-tq-bOp"/>
+                                </constraints>
+                                <state key="normal" image="btn_map_current_location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveToCurrentLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eNz-Lb-u3B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -55,7 +69,9 @@
                             <constraint firstItem="YTL-Lw-Gt0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="405-xh-sHd"/>
                             <constraint firstItem="2dZ-hI-C2a" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="V0z-Ww-KR9"/>
                             <constraint firstItem="YTL-Lw-Gt0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="czB-d4-0xb"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GQm-Jx-ICL" secondAttribute="bottom" constant="10" id="fYc-Ps-4C2"/>
                             <constraint firstItem="2dZ-hI-C2a" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="i7C-Wk-dBk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GQm-Jx-ICL" secondAttribute="trailing" id="tYw-9G-w6n"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="YTL-Lw-Gt0" secondAttribute="bottom" id="yDE-pg-oOZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YTL-Lw-Gt0" secondAttribute="trailing" constant="-16" id="z9a-cI-8aP"/>
                         </constraints>
@@ -136,6 +152,9 @@
             <point key="canvasLocation" x="626" y="299"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_map_current_location" width="36" height="36"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
